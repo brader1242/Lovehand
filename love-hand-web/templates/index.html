@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LOVE HAND</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div class="camera-card">
+  <video id="video" autoplay playsinline muted></video>
+  <div id="status">Tekan "Mulai Kamera"</div>
+</div>
+<div class="controls"><button id="startBtn">Mulai Kamera</button></div>
+<div class="hint" id="hint">Buka telapak tangan lebar-lebar (5 jari) untuk memulai...</div>
+<script>
+window.PARTNER_NAME={{ partner_name|tojson }};
+window.BIRTHDAY_MESSAGE={{ birthday_message|tojson }};
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
